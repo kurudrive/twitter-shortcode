@@ -3,7 +3,7 @@
  * Plugin Name:     Twitter Shortcode
  * Plugin URI:      PLUGIN SITE HERE
  * Description:     PLUGIN DESCRIPTION HERE
- * Author:          YOUR NAME HERE
+ * Author:          kurudrive
  * Author URI:      YOUR SITE HERE
  * Text Domain:     twitter-shortcode
  * Domain Path:     /languages
