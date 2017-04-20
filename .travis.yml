@@ -1,41 +1,17 @@
-language: php
-
-notifications:
-  email:
-    on_success: never
-    on_failure: change
+language: node_js
 
 branches:
   only:
     - build_test
 
-php:
-  # - 5.3
-  - 5.6
-
-env:
-  - WP_VERSION=latest WP_MULTISITE=0
-  # - WP_VERSION=3.7 WP_MULTISITE=0
-  - WP_VERSION=4.7.3 WP_MULTISITE=0
-
-matrix:
-  include:
-    - php: 5.3
-      env: WP_VERSION=latest WP_MULTISITE=1
-
-before_script:
-  - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
-  - export PATH="$HOME/.composer/vendor/bin:$PATH"
-  - |
-    if [[ ${TRAVIS_PHP_VERSION:0:3} == "7.0" ]]; then
-      composer global require "phpunit/phpunit=5.6.*"
-    else
-      composer global require "phpunit/phpunit=4.8.*"
-    fi
-  # - |
-  #   composer global require wp-coding-standards/wpcs
-  #   phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
+before_script: bash ./bin/build.sh
 
 script:
-  # - phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php')
-  - phpunit
+    - ls -al style.css
+
+after_success: bash ./bin/deploy.sh
+
+env:
+  global:
+  - GH_REF: github.com/kurudrive/twitter-shortcode.git
+  - secure: "n6PEKZz46y9fck/uiXStX3LLRqKnsQvEWBAK6DocktYmiU+tvkQ5iVnb6orNU6Eaw8UNAbqFJZSMn6a35p6Ed7uQWmja0GQ7c3nOoMV0Xl59qUVHIQkPObGqkN0lVHPBiM5ShoX1/MDwVljzFV+nDfaGlZH00ROCoCKUjSWoZmBS96PbFDjE848tFao/ElIDfw2DzdOzHkVWtkxXJtlTgdAxWHIwW5BHmUpbhDJ1jiVO/cTJS2vThZONJlFjRTJ6dq5rEb1lE/5lXX5s135wNhg/Qa9bibo5v4cmy8f1zQMc2ni4I4XJCkmewUUnwP8qosCloV/ERDd3lYIY3v54D/NWEsn1Bkd18Anffk5sRo8hjN9gsEt67DfQCAnSEcR5YW/wDSzG3C2S+3k5RdQEzb691z2DEOk4ZkzkZo2t930ra/gWJC3/glv2MJaaZfERicG0Zt0LjbMDNUCGVdkk2OOOFClWuiQFs7PLNUrjY2fzEqFzNAReGl2gMMAWkMPTZGVXlJMjWoS6XwrZc6GyY/jkaA+7gRZMrppyaFbow2BKuHFmWfDO6KSvCHAQgzsEvd7MrmCN8NOCKvjmHtMITlGmdf83NQx+TxCFM5VrkKVSWkyYxJ8XqVuiIOmtoiQZRXtJrzfwn4k8NkVWv0dHWg94/kkRVJSp3uPvPvVr5Do="
