@@ -7,7 +7,7 @@ notifications:
 
 branches:
   only:
-    - master
+    - build_test
 
 php:
   # - 5.3
