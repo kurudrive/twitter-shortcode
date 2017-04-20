@@ -4,7 +4,7 @@ branches:
   only:
     - build_test
 
-# before_script: bash ./bin/build.sh
+## before_script: bash ./bin/build.sh
 
 # script:
 #     - ls -al style.css
