@@ -1,9 +1,5 @@
-
 {
-  "name": "twitter-shortcode",
-  "version": "1.0.0",
-  "description": "wordpress plugin",
-  "dependencies": {
-    "gulp": "^3.9.1"
-  },
+  "scripts": {
+    "dist": "gulp dist"
+  }
 }
