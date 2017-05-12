@@ -1,8 +1,8 @@
 
 {
-  // "scripts": {
-  //   "build": "./node_modules/gulp/bin/gulp.js",
-  // },
+  "scripts": {
+    "build": "./node_modules/gulp/bin/gulp.js",
+  },
   "name": "twitter-shortcode",
   "version": "0.1.0",
   "main": "Gruntfile.js",
