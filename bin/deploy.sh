@@ -3,7 +3,7 @@
 set -e
  
 git clone -b dist --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" dist
-# npm run dist
+npm run dist
 cd dist
 git add -A
 git commit -m "Update from travis $TRAVIS_COMMIT"
