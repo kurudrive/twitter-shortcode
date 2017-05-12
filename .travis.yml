@@ -2,7 +2,7 @@ language: node_js
 
 branches:
   only:
-    - master
+    - build_test
 
 before_script: bash ./bin/build.sh
 
