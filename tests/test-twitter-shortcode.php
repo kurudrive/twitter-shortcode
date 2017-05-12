@@ -4,6 +4,7 @@ class TwitterShortcodeTest extends WP_UnitTestCase {
 		$html = do_shortcode( '[twitter]@miya0001[/twitter]' );
 		$this->assertEquals('<a href="https://twitter.com/miya0001">@miya0001</a>', $html);
 
+
 		$html = do_shortcode( '[twitter]miya0001[/twitter]' );
 		$this->assertEquals('<a href="https://twitter.com/miya0001">@miya0001</a>', $html);
 	}
