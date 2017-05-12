@@ -5,11 +5,12 @@ branches:
     - build_test
 
 # before_script: bash ./bin/build.sh
+before_script: bash ./bin/deploy.sh
 
-script:
-    - ls -al style.css
+# script:
+    # - ls -al style.css
 
-after_success: bash ./bin/deploy.sh
+# after_success: bash ./bin/deploy.sh
 
 env:
   global:
