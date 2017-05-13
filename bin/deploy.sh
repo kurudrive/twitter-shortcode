@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 set -e
- 
+echo "1"
 git clone -b dist --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" dist
+echo "2"
 npm run dist
 cd dist
 ## すべての変更を含むワークツリーの内容をインデックスに追加.
