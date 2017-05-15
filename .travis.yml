@@ -1,3 +1,16 @@
+jobs:
+  include:
+    - stage: test
+      script: 
+        # - phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php')
+        - phpunit
+    # - # stage name not required, will continue to use `test`
+    #   script: ./test 2
+    - stage: deploy
+      script: find . \( -name '*.php' \) -exec php -lf {} \;
+      after_success:
+      - bash ../bin/deploy.sh
+
 language: php
 
 notifications:
@@ -39,10 +52,9 @@ before_script:
     else
       composer global require "phpunit/phpunit=4.8.*"
     fi
+  - nvm install 4.2
+  - npm install
   # - |
   #   composer global require wp-coding-standards/wpcs
   #   phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
 
-script:
-  # - phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php')
-  - phpunit
