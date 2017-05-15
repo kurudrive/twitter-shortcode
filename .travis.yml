@@ -38,8 +38,6 @@ branches:
 jobs:
   include:
     - stage: testsssuuuu
-      php:
-        - 5.6
       # 環境変数の定義
       env:
         - WP_VERSION=latest WP_MULTISITE=0
@@ -57,6 +55,8 @@ jobs:
           else
             composer global require "phpunit/phpunit=4.8.*"
           fi
+      php:
+        - 5.6
       script: 
         - phpunit
     - stage: deploy
