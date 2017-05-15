@@ -10,14 +10,14 @@ sudo: false
 php:
   - "5.6"
 
-# jobs:
-#   include:
-#     - stage: test
-#       script: ./test 1
-#     - # stage name not required, will continue to use `test`
-#       script: ./test 2
-#     - stage: deploy
-#       script: ./deploy
+jobs:
+  include:
+    - stage: test
+      script: ./test 1
+    - # stage name not required, will continue to use `test`
+      script: ./test 2
+    - stage: deploy
+      script: ./deploy
 
 
 # 環境変数の定義 
