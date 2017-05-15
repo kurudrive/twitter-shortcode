@@ -10,7 +10,7 @@ sudo: false
 php:
   - "5.6"
 
-# 環境変数の定義 
+# 環境変数の定義 #
 env:
   global:
     - GIT_COMMITTER_NAME=travis-ci
