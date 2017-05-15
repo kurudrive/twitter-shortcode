@@ -38,27 +38,27 @@ branches:
 jobs:
   include:
     - stage: testsssuuuu
-        php:
-          - 5.6
-        # 環境変数の定義
-        env:
-          - WP_VERSION=latest WP_MULTISITE=0
-        #   - WP_VERSION=4.7.3 WP_MULTISITE=0
-        # matrix:
-        #   include:
-        #     - php: 5.3
-        #       env: WP_VERSION=latest WP_MULTISITE=1
-        before_script:
-          - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
-          - export PATH="$HOME/.composer/vendor/bin:$PATH"
-          - |
-            if [[ ${TRAVIS_PHP_VERSION:0:3} == "7.0" ]]; then
-              composer global require "phpunit/phpunit=5.6.*"
-            else
-              composer global require "phpunit/phpunit=4.8.*"
-            fi
-        script: 
-          - phpunit
+      php:
+        - 5.6
+      # 環境変数の定義
+      env:
+        - WP_VERSION=latest WP_MULTISITE=0
+      #   - WP_VERSION=4.7.3 WP_MULTISITE=0
+      # matrix:
+      #   include:
+      #     - php: 5.3
+      #       env: WP_VERSION=latest WP_MULTISITE=1
+      before_script:
+        - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+        - export PATH="$HOME/.composer/vendor/bin:$PATH"
+        - |
+          if [[ ${TRAVIS_PHP_VERSION:0:3} == "7.0" ]]; then
+            composer global require "phpunit/phpunit=5.6.*"
+          else
+            composer global require "phpunit/phpunit=4.8.*"
+          fi
+      script: 
+        - phpunit
     - stage: deploy
       php:
         - "5.6"
