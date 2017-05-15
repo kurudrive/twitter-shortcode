@@ -9,11 +9,11 @@ branches:
   only:
     - build_test
 
-sudo: false
+# sudo: false
 
-php:
-  # - 5.3
-  - 5.6
+# php:
+#   # - 5.3
+#   - 5.6
 
 jobs:
   include:
