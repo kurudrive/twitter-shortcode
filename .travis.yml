@@ -7,7 +7,7 @@ notifications:
 
 branches:
   only:
-    - master
+    - php_unit_ok
 
 php:
   # - 5.3
