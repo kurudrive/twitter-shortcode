@@ -1,3 +1,18 @@
+language: php
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+branches:
+  only:
+    - build_test
+
+php:
+  # - 5.3
+  - 5.6
+
 jobs:
   include:
     - stage: test
@@ -39,22 +54,6 @@ jobs:
       script: find . \( -name '*.php' \) -exec php -lf {} \;
       after_success:
       - bash ../bin/deploy.sh
-
-language: php
-
-notifications:
-  email:
-    on_success: never
-    on_failure: change
-
-branches:
-  only:
-    - build_test
-
-php:
-  # - 5.3
-  - 5.6
-
 
   # - |
   #   composer global require wp-coding-standards/wpcs
