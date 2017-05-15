@@ -1,5 +1,6 @@
 language: php
 
+# 実行するブランチ
 branches:
   only:
     - build_test
@@ -8,10 +9,11 @@ sudo: false
  
 php:
   - "5.6"
- 
+
+# 環境変数の定義 
 env:
-  # - WP_VERSION=latest WP_MULTISITE=0
-  # - WP_VERSION=4.7.3 WP_MULTISITE=0
+  - WP_VERSION=latest WP_MULTISITE=0
+  - WP_VERSION=4.7.3 WP_MULTISITE=0
   global:
     - GIT_COMMITTER_NAME=travis-ci
     - GIT_COMMITTER_EMAIL=kurudrive@gmail.com
