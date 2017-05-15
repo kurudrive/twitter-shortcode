@@ -2,7 +2,7 @@ language: php
 
 branches:
   only:
-    - build_test
+    - build_dist_ok
  
 sudo: false
  
