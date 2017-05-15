@@ -31,13 +31,13 @@ before_script:
       composer global require "phpunit/phpunit=4.8.*"
     fi
 
-script:
-  # - phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php')
-  - phpunit
+# script:
+#   # - phpcs --standard=phpcs.ruleset.xml $(find . -name '*.php')
+#   - phpunit
 
 jobs:
   include:
-    # - stage: testsssuuuu
+    - stage: testsssuuuu
     #   php:
     #     - 5.6
     #   # 環境変数の定義
@@ -57,8 +57,8 @@ jobs:
     #       else
     #         composer global require "phpunit/phpunit=4.8.*"
     #       fi
-    #   script: 
-    #     - phpunit
+      script: 
+        - phpunit
     - stage: deploy
       php:
         - "5.6"
