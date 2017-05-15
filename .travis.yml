@@ -17,7 +17,7 @@ php:
 
 jobs:
   include:
-    - stage: test
+    - stage: testsssuuuu
       php:
       # - 5.3
         - 5.6
