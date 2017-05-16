@@ -9,6 +9,8 @@ branches:
   only:
     - build_test
 
+sudo: false
+
 php:
   - 5.6
 
