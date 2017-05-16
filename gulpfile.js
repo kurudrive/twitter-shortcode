@@ -10,7 +10,7 @@ gulp.task('copy', function() {
                 './**/*.php',
                 './assets/dist/**',
                 './style.css',
-                "!./test/**",
+                // "!./test/**",
                 "!./dist/**",
                 "!./node_modules/**/*.*"
             ],
