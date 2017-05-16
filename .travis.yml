@@ -45,7 +45,7 @@ script:
   - phpunit
 
 after_success:
-        - bash ./bin/deploy.sh
+  - bash ./bin/deploy.sh
 # jobs:
 #   include:
 #     # - stage: testsssuuuu
