@@ -7,9 +7,10 @@ var del = require('del');
 gulp.task('copy', function() {
     return gulp.src(
             [
-                // './**/*.php',
+                './**/*.php',
                 './assets/dist/**',
                 './style.css',
+                "!./test/**",
                 "!./dist/**",
                 "!./node_modules/**/*.*"
             ],
