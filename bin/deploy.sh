@@ -11,7 +11,7 @@ if [[ "build_test" != "$TRAVIS_BRANCH" ]]; then
 fi
 
 set -e
-echo 1
+
 git clone -b dist --quiet "https://github.com/${TRAVIS_REPO_SLUG}.git" dist
 npm run dist
 cd dist
