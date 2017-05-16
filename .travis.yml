@@ -9,8 +9,8 @@ branches:
   only:
     - build_test
 
-# php:
-#   - 5.6
+php:
+  - 5.6
 
 # env:
 #   - WP_VERSION=latest WP_MULTISITE=0
