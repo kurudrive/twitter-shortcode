@@ -11,11 +11,7 @@ branches:
 
 sudo: false
 
-# php:
-#   - 5.6
-
-env:
-  
+env: 
   global:
     - GIT_COMMITTER_NAME=travis-ci
     - GIT_COMMITTER_EMAIL=kurudrive@gmail.com
@@ -32,7 +28,7 @@ matrix:
     - php: 5.6
       env:
         - WP_VERSION=latest WP_MULTISITE=0
-        # - WP_VERSION=3.7 WP_MULTISITE=0
+        - WP_VERSION=3.7 WP_MULTISITE=0
         - WP_VERSION=4.7.3 WP_MULTISITE=0
 
 before_script:
