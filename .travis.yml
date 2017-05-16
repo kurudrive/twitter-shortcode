@@ -56,7 +56,7 @@ jobs:
             composer global require "phpunit/phpunit=4.8.*"
           fi
       php:
-        - "5.6"
+        - 5.6
       script: 
         - phpunit
     - stage: deploy
