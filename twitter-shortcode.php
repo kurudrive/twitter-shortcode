@@ -7,7 +7,7 @@
  * Author URI:      YOUR SITE HERE
  * Text Domain:     twitter-shortcode
  * Domain Path:     /languages
- * Version:         0.1.12
+ * Version:         0.1.13
  *
  * @package         Twitter_Shortcode
  */

@@ -19,7 +19,7 @@ gulp.task('copy', function() {
 } );
 
 gulp.task('clean', function(cb) {
-  del(['tmp', '.travis.yml', 'test'], cb);
+  // del(['tmp', '.travis.yml', 'test'], cb);
 });
 
 gulp.task('build', ['clean'], function() {
